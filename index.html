@@ -11,35 +11,17 @@
 
 <body>
 	<canvas id="c"></canvas>
-  
-  <video
-    id = "video"
-    playsinline
-    webkit-playsinline
-    loop
-    autoplay muted
-    width="1040"
-    height="1040"
-    src = "assets/clock.mp4"
-    style = "display: none"
-  ></video>
+  <video id = "assets/clock.mp4" src = "assets/spinning.mp4" width="1040" height="1040" playsinline webkit-playsinline loop autoplay muted style = "display: none"></video>
+  <video id = "assets/spinning.mp4" src = "assets/clock.mp4" width="1040" height="1040" playsinline webkit-playsinline loop autoplay muted style = "display: none"></video>
+  <video id = "assets/fanArt.mp4" src = "assets/fanArt.mp4" width="1040" height="1040" playsinline webkit-playsinline loop autoplay muted style = "display: none"></video>
+  <video id = "assets/eyes.mp4" src = "assets/eyes.mp4" width="1040" height="1040" playsinline webkit-playsinline loop autoplay muted style = "display: none"></video>
 
-  <video
-    id = "spinVideo"
-    playsinline
-    webkit-playsinline
-    loop
-    autoplay muted
-    width="1290"
-    height="1040"
-    src = "assets/spinning.mp4"
-    style = "display: none"
-  ></video>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script>
 <script type="importmap">{
 	"imports": {
-		  "three": "https://threejs.org/build/three.module.js"
+		  "three": "https://threejs.org/build/three.module.js",
+      "interaction": "/node_modules/three.interaction/build/three.interaction.module.js"
 	  }
   }
   </script><!-- Remove this when import maps will be widely supported -->
