@@ -206,7 +206,7 @@ function main() {
     toneMapped: false,
   })
 
-  let qrTexture = new THREE.TextureLoader().load( "circleQR.png" );
+  let qrTexture = new THREE.TextureLoader().load( "assets/circleQR.png" );
   var qrMaterial = new THREE.MeshBasicMaterial({
       map: qrTexture,
       side: THREE.FrontSide,
@@ -224,7 +224,7 @@ function main() {
   movieCubeScreen2.position.set(-9, 14, 0)
   scene.add(movieCubeScreen2)
 
-  let movieGeometry3 = new THREE.SphereGeometry(2, 32, 32, 0, Math.PI, 0, Math.PI)
+  let movieGeometry3 = new THREE.CircleGeometry( 3, 32 );//THREE.SphereGeometry(2, 32, 32, 0, Math.PI, 0, Math.PI)
   let movieCubeScreen3 = new THREE.Mesh(movieGeometry3, movieMaterial)
   movieCubeScreen3.position.set(7, 3, 0)
   scene.add(movieCubeScreen3)
@@ -276,7 +276,11 @@ function main() {
         cubeBody.position.y,
         cubeBody.position.z
     )
-    //videoTexture.needsUpdate = true
+    movieCubeScreen.quaternion.copy(camera.quaternion)
+    movieCubeScreen2.quaternion.copy(camera.quaternion)
+    movieCubeScreen3.quaternion.copy(camera.quaternion)
+
+    videoTexture.needsUpdate = true
     spinVideoTexture.needsUpdate = true
     render()
       
