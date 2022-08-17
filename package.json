@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/node": "^18.0.6",
     "enable3d": "^0.25.2",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "three.interaction": "^0.2.3"
   }
 }
